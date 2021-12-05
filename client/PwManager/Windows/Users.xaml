@@ -1,0 +1,35 @@
+﻿<Window x:Class="PwManager.Windows.Users"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PwManager.Windows"
+        mc:Ignorable="d"
+        Title="Users" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke">
+        <DataGrid x:Name="UsersDG" HorizontalAlignment="Left" Margin="265,14,0,0" VerticalAlignment="Top"   
+            Height="379" Width="510" AutoGenerateColumns="False"  
+            AlternatingRowBackground="LightSlateGray" GridLinesVisibility="Horizontal"  
+            ColumnWidth="*" SelectionChanged="AccountsDG_SelectionChanged" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="userid" Binding="{Binding Path=ID}" Header="Id" Width="Auto" />
+                <DataGridTextColumn x:Name="username" Binding="{Binding Path=UserName}" Header="Username" Width="*" />
+                <DataGridTextColumn x:Name="password" Binding="{Binding Path=Password}" Header="Password" Width="*" />
+                <DataGridTextColumn x:Name="isadmin" Binding="{Binding Path=IsAdmin}" Header="IsAdmin" Width="Auto" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="210" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="usernameTb" Background="LightGray" TabIndex="0" HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="32" FontSize="18"/>
+        <Button x:Name="add" TabIndex="5" Content="Add user" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Width="210" Height="36" FontSize="18" FontWeight="Bold" FontStyle="Italic" Click="add_Click"/>
+        <Button x:Name="update" TabIndex="3" Content="Update" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" Width="210" Height="32" FontSize="18" FontWeight="Bold" Click="update_Click"/>
+        <Button x:Name="delete" TabIndex="4" Content="Delete" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" Width="210" FontSize="18" Click="delete_Click" FontWeight="Bold"/>
+        <Label x:Name="userIdLbl" Content="User ID:" HorizontalAlignment="Left" Margin="6,46,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="userIdTb" Background="LightGray" HorizontalAlignment="Left" Margin="115,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="18" IsEnabled="False"/>
+        <Label x:Name="Title" Content="USERS" HorizontalAlignment="Left" Margin="69,10,0,0" VerticalAlignment="Top" Width="117" FontSize="18" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="210" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="passwordTb" Background="LightGray" TabIndex="1" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="210" Height="32" FontSize="18"/>
+        <CheckBox IsChecked="False" Background="LightGray" TabIndex="2" x:Name="isAdminCb" Content="Admin" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Width="86"/>
+
+
+    </Grid>
+</Window>

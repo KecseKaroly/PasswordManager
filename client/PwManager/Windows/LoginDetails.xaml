@@ -1,0 +1,41 @@
+﻿<Window x:Class="PwManager.Windows.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PwManager.Windows"
+        mc:Ignorable="d"
+        Title="Accounts with details" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke">
+        <DataGrid x:Name="AccountsDG" HorizontalAlignment="Left" Margin="265,14,0,0" VerticalAlignment="Top"   
+            Height="379" Width="510" AutoGenerateColumns="False"  
+            AlternatingRowBackground="LightSlateGray" GridLinesVisibility="Horizontal"  
+            ColumnWidth="*" SelectionChanged="AccountsDG_SelectionChanged" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="accid" Binding="{Binding Path=AccId}" Header="AccId" Width="Auto" />
+                <DataGridTextColumn x:Name="username" Binding="{Binding Path=Username}" Header="Username" Width="*" />
+                <DataGridTextColumn x:Name="password" Binding="{Binding Path=Password}" Header="Password" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="210" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="usernameTb" Background="LightGray" TabIndex="0" HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="32" FontSize="18"/>
+        <Button x:Name="add" TabIndex="4" Content="Add account" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="210" Height="36" FontSize="18" FontWeight="Bold" FontStyle="Italic" Click="add_Click"/>
+        <Button x:Name="update" TabIndex="2" Content="Update" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="210" Height="32" FontSize="18" FontWeight="Bold" Click="update_Click"/>
+        <Button x:Name="delete" TabIndex="3" Content="Delete" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="210" FontSize="18" Click="delete_Click" FontWeight="Bold"/>
+        <Label x:Name="appIdLbl" Content="Account ID:" HorizontalAlignment="Left" Margin="6,46,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="AccIDtb" Background="LightGray" HorizontalAlignment="Left" Margin="115,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="18" IsEnabled="False"/>
+        <Label x:Name="Title" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="240" FontSize="18" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="210" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="passwordTb" Background="LightGray" TabIndex="1" HorizontalAlignment="Left" Margin="10,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="32" FontSize="18" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.049"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+    </Grid>
+</Window>
