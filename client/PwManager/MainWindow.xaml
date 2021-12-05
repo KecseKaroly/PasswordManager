@@ -1,0 +1,25 @@
+﻿<Window x:Class="PwManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PwManager"
+        mc:Ignorable="d"
+        Title="Login" Height="393" Width="568" WindowStartupLocation="CenterScreen">
+    <Grid Background="WhiteSmoke">
+        <Label Content="Password Manager" HorizontalAlignment="Left" Margin="136,25,0,0" VerticalAlignment="Top" Height="50" Width="347" FontSize="36" FontFamily="Franklin Gothic Demi" FontWeight="Bold" FontStyle="Italic"/>
+
+        <Label Content="Username" HorizontalAlignment="Left" Margin="47,129,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="18"/>
+        <TextBox x:Name="Usernametb" Background="LightGray" TabIndex="0" HorizontalAlignment="Left" Margin="44,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" FontFamily="Franklin Gothic Medium" FontSize="16"/>
+
+        <Label Content="Password" HorizontalAlignment="Left" Margin="47,217,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="18"/>
+        <PasswordBox x:Name="Passwordtb" Background="LightGray" TabIndex="1" HorizontalAlignment="Left" Margin="44,247,0,0"  VerticalAlignment="Top" Width="234" RenderTransformOrigin="0.503,0.492" FontFamily="Franklin Gothic Medium" FontSize="16"/>
+
+        <Label Content="BWQ1BU" HorizontalAlignment="Left" Margin="480,300,0,0" VerticalAlignment="Top"/>
+        <Label Content="Made by: Kecse Károly Dániel" HorizontalAlignment="Left" Margin="374,313,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="LoginBtn" TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="44,300,0,0" VerticalAlignment="Top" Width="234" Height="26" Click="LoginBtn_Click"/>
+
+
+    </Grid>
+</Window>
